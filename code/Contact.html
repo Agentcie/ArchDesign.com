@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact - Arch Design</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+  <link rel="stylesheet" href="styles1.css">
+</head>
+<body>
+  <header>
+    <div class="header-inner">
+      <div class="logo" tabindex="0" onclick="location.href='index.html'">Arch Design</div>
+      <nav role="navigation" aria-label="Primary navigation">
+        <a href="index.html" tabindex="0">Home</a>
+       
+      </nav>
+      <button aria-label="Toggle menu" class="mobile-toggle" aria-expanded="false" aria-controls="mobile-nav">&#9776;</button>
+    </div>
+    <nav id="mobile-nav" class="mobile-nav" role="navigation" aria-label="Mobile navigation">
+     
+    </nav>
+  </header>
+
+  <main>
+    <h1>Contact Me</h1>
+    <p class="desc">Get in touch to discuss your project, ask questions, or just say hello!</p>
+    <form action="https://api.web3forms.com/submit" method="POST">
+      <!-- Replace with your Access Key -->
+      <input type="hidden" name="access_key" value="586d94f2-6b80-4b0f-8ba7-eb9cd086cf61">
+
+      <!-- Form Inputs. Each input must have a name="" attribute -->
+      <label for="name">Name</label>
+      <input id="name" name="name" type="text" placeholder="Your name" required autocomplete="name" />
+      
+      <label for="email">Email</label>
+      <input id="email" name="email" type="email" placeholder="you@example.com" required autocomplete="email" />
+
+      <label for="message">Message</label>
+      <textarea id="message" name="message" placeholder="Your message" required></textarea>
+
+      <!-- Honeypot Spam Protection -->
+      <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+
+      <!-- Custom Confirmation / Success Page -->
+      <!-- <input type="hidden" name="redirect" value="https://mywebsite.com/thanks.html"> -->
+
+      <button type="submit">Submit Form</button>
+    </form>
+
+    <section class="contact-info" aria-label="Other contact information">
+      <div class="contact-item">
+        <span class="material-symbols-outlined" aria-hidden="true">phone</span>
+        <span>+63 9924971122</span>
+      </div>
+      <div class="contact-item">
+        <span class="material-symbols-outlined" aria-hidden="true">email</span>
+        <span>devellesarchie@.com</span>
+      </div>
+      <div class="contact-item">
+        <span class="material-symbols-outlined" aria-hidden="true">location_on</span>
+        <span>South Cotabato, Philippines</span>
+      </div>
+    </section>
+  </main>
+
+  <footer role="contentinfo">
+    <p>© 2025 Arch Design. All rights reserved. Visit <a href="https://www.canva.com" target="_blank" rel="noopener noreferrer">Canva</a> for more design inspiration.</p>
+  </footer>
+
+  <script>
+    // Mobile menu toggle
+    const mobileToggle = document.querySelector('.mobile-toggle');
+    const mobileNav = document.getElementById('mobile-nav');
+
+    mobileToggle.addEventListener('click', () => {
+      const expanded = mobileToggle.getAttribute('aria-expanded') === 'true';
+      mobileToggle.setAttribute('aria-expanded', String(!expanded));
+      mobileNav.classList.toggle('show');
+    });
+  </script>
+</body>
+</html>
+

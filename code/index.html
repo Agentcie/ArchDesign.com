@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Creative Freelancer - Entertainment Design</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+   <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <div class="container header-inner">
+      <div class="logo" tabindex="0">Arch Design</div>
+      <nav role="navigation" aria-label="Primary navigation">
+        <a href="#services" tabindex="0">Services</a>
+        <a href="#about" tabindex="0">About</a>
+        <a href="Contact.html" tabindex="0">Contact</a>
+      </nav>
+      <button aria-label="Toggle menu" class="mobile-toggle" aria-expanded="false" aria-controls="mobile-nav">&#9776;</button>
+    </div>
+    <nav id="mobile-nav" class="mobile-nav" role="navigation" aria-label="Mobile navigation">
+      <a href="#services" tabindex="0">Services</a>
+      <a href="#about" tabindex="0">About</a>
+      <a href="Contact.html" tabindex="0">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" aria-label="Welcome introduction">
+      <div class="hero-text">
+        <h1>Stand Out with Stunning Canva Templates!</h1>
+        <p>Elevate your brand with professionally designed, fully editable Canva templates. Perfect for entrepreneurs, content creators, and small businesses—just customize, download, and post! No design skills needed. </p>
+        <button class="btn-primary" tabindex="0">Start Your Project</button>
+      </div>
+      <div class="hero-image" aria-hidden="true">
+        <img src="https://placehold.co/600x450/png?text=Creative+Design+Showcase" alt="Abstract colorful entertainment design with gradients and playful shapes" />
+      </div>
+    </section>
+
+    <section id="services" class="services" aria-label="Services offered">
+      <div class="container">
+        <h2>What I Offer</h2>
+        <div class="service-cards">
+          <article class="service-card" tabindex="0" aria-describedby="service1-desc">
+            <div class="service-icon material-symbols-outlined" aria-hidden="true">palette</div>
+            <h3 class="service-title">Canva Design</h3>
+            <p id="service1-desc" class="service-desc">Creative visuals, branding, and promotional materials that captivate your audience.</p>
+          </article>
+          <article class="service-card" tabindex="0" aria-describedby="service2-desc">
+            <div class="service-icon material-symbols-outlined" aria-hidden="true">videocam</div>
+            <h3 class="service-title">Video Editing</h3>
+            <p id="service2-desc" class="service-desc">Engaging video content including promos, trailers, and social media clips.</p>
+          </article>
+          <article class="service-card" tabindex="0" aria-describedby="service3-desc">
+            <div class="service-icon material-symbols-outlined" aria-hidden="true">music_note</div>
+            <h3 class="service-title">Audio Production</h3>
+            <p id="service3-desc" class="service-desc">Soundtracks, effects, and voiceovers tailored for entertainment projects.</p>
+          </article>
+          <article class="service-card" tabindex="0" aria-describedby="service4-desc">
+            <div class="service-icon material-symbols-outlined" aria-hidden="true">photo_camera</div>
+            <h3 class="service-title">Photography</h3>
+            <p id="service4-desc" class="service-desc">Dynamic photoshoots capturing the energy and essence of events and talent.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="about" aria-label="About the freelancer">
+      <h2>About Me</h2>
+      <p>
+        I'm a Canva Creative Designer specializing in entertainment design. With years of experience crafting captivating visuals and audio-visual content, I transform ideas into immersive experiences.
+        Let's bring your entertainment brand or event to life with stunning designs.
+      </p>
+    </section>
+  </main>
+
+  <footer role="contentinfo">
+    <p>© 2025 Arch Design. All rights reserved. Visit <a href="https://www.canva.com" target="_blank" rel="noopener noreferrer">Canva</a> for more design inspiration.</p>
+  </footer>
+
+  <script>
+    // Mobile menu toggle
+    const mobileToggle = document.querySelector('.mobile-toggle');
+    const mobileNav = document.getElementById('mobile-nav');
+
+    mobileToggle.addEventListener('click', () => {
+      const expanded = mobileToggle.getAttribute('aria-expanded') === 'true';
+      mobileToggle.setAttribute('aria-expanded', String(!expanded));
+      mobileNav.classList.toggle('show');
+    });
+  </script>
+</body>
+</html>
+
